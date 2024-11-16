@@ -3,17 +3,48 @@
 @tailwind utilities;
 
 body {
-  /* background-color: #fd2c2a; */
-  transition: all cubic-bezier(0.23, 1, 0.32, 1) 1s;
   background-color: #000;
   color: #fff;
   font-family: 'Roboto', sans-serif;
 }
 
-canvas {
-  pointer-events: none;
+.about-us {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #000B1F, #001F3F);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
-span.growing {
-  background-color: #fd2c2a;
+.section-subtitle {
+  color: #90EE90;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+.section-description {
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Essential Locomotive Scroll styles */
+[data-scroll] {
+  transition: transform 0.8s ease-out;
+}
+
+.is-inview {
+  transform: translateY(0);
+  opacity: 1;
 }
