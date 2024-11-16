@@ -207,7 +207,7 @@ class MarineDebrisAPI:
 
 def main():
     """Main entry point"""
-    model_path = './flask-server/trash_mbari_09072023_640imgsz_50epochs_yolov8.pt'
+    model_path = os.path.join(os.path.dirname(__file__), 'trash_mbari_09072023_640imgsz_50epochs_yolov8.pt')
     api = MarineDebrisAPI(model_path)
     api.app.run(debug=True, port=5000)
 
